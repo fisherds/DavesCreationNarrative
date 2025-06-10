@@ -86,25 +86,25 @@
 
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-[#00A0B0] uppercase tracking-wide">Dave's Creation Narrative</h1>
-            <p class="text-xl md:text-2xl mt-2 text-gray-600">To Better Understand the Creative Process of a Work Like This... Try it!</p>
+            <p class="text-xl md:text-2xl mt-2 text-gray-600">To Better Understand the Creative Process of a Creation Narrative... Try Creating One!</p>
         </header>
 
         <main class="space-y-8">
             
             <section id="market-overview" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">Market Overview: A New Era of Growth</h2>
-                    <p class="text-gray-600 max-w-3xl mx-auto">The AI-Powered Analytics market is experiencing explosive growth, fundamentally reshaping how industries approach data-driven decision-making. The convergence of big data and advanced machine learning algorithms has created a fertile ground for innovation and significant market expansion.</p>
+                    <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">Era One - The Big Bang and Boundry of the Void</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto">Before time began there was nothing, no laws of physics, no dimensions, no time, only one God, and it was not good. So God set about the business of designing, building, sustaining, and maintaining life. God began to go forth from God. Non-physical space (spiritual) was made and beings were created to fill the spiritual space. Then physical space began not as a cosmic boom, but as a natural expansion of God, moving forward at the speed of light as the created cosmos pushed into the void of nothing. Dimensional space, following the ordering principles of time, space, matter, and physical laws moved forwards at the speed of light dividing the void. And God reflected on his work and it had the potential for sustainable life. And there was an era of death, then life, era one.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-1 text-center">
-                        <h3 class="text-lg font-semibold text-gray-500">Projected Global Market Size (2030)</h3>
-                        <p class="text-6xl lg:text-7xl font-extrabold text-[#EB6841] my-4">$125 Billion</p>
-                        <p class="text-gray-500">This represents a staggering compound annual growth rate (CAGR) of over 30%, highlighting immense investment and adoption across the globe.</p>
+                        <h3 class="text-lg font-semibold text-gray-500">In the beginning...</h3>
+                        <p class="text-3xl lg:text-4xl font-extrabold text-[#EB6841] my-4">125 Billion Years Ago</p>
+                        <p class="text-gray-500">This chart represents the growth of the cosmos not just in physical dimension but in terms of potential good.</p>
                     </div>
                     <div class="md:col-span-2">
                          <div class="chart-container">
-                            <canvas id="marketGrowthChart"></canvas>
+                            <canvas id="cosmosGrowthChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -263,14 +263,14 @@
             }
         };
 
-        const ctxGrowth = document.getElementById('marketGrowthChart').getContext('2d');
+        const ctxGrowth = document.getElementById('cosmosGrowthChart').getContext('2d');
         new Chart(ctxGrowth, {
             type: 'line',
             data: {
-                labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+                labels: ['150', '125', '100', '75', '50', '25', '0', '25'],
                 datasets: [{
-                    label: 'Market Value (in Billion $)',
-                    data: [12, 18, 25, 35, 50, 70, 95, 125],
+                    label: 'Cosmos Size',
+                    data: [0, 0, 25, 35, 50, 70, 95, 125],
                     borderColor: PALETTE.blue,
                     backgroundColor: 'rgba(0, 160, 176, 0.1)',
                     fill: true,
