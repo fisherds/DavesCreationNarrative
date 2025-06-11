@@ -7,6 +7,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+    <!-- 
+        Narrative Plan & Structure:
+        The infographic now focuses on Dave's Creation Narrative.
+        1.  Hook: A bold title and an engaging introduction to the narrative.
+        2.  Era 0 - The Big Bang and Boundary of the Void: Describes the initial state and the start of expansion, visualized by cosmos growth.
+        3.  Era 1 - Spiritual Space: Details the creation of non-physical space.
+        4.  Era 2 - Physical Space: Explains the expansion of physical space and laws.
+        5.  Era 1b - Filling Spiritual Space: A video illustrates the populating of spiritual realms.
+        6.  Era 2b - Life on Earth: A video showcases the creation of life on Earth.
+        7.  Era 3 - Designing Nephesh Hiya: Discusses the creation of living beings with free will, including opportunities and threats.
+        8.  Future Outlook: Concludes with a broader perspective on the narrative's themes.
+    -->
+    <!-- 
+        Selected Color Palette: Energetic & Playful
+        HEX Codes: #00A0B0 (Ocean Blue), #6A4A3C (Brown), #CC333F (Crimson Red), #EB6841 (Orange), #EDC951 (Mustard Yellow)
+    -->
+    <!-- 
+        Visualization Choices:
+        - Cosmos Growth (Change): Line Chart. Perfect for showing trends over time. Library: Chart.js/Canvas. NO SVG.
+        - Video Embeds: Directly show narrative elements. Method: HTML5 Video. NO SVG.
+        - Era 3 - Designing Nephesh Hiya (Organize): HTML/CSS Diagram. A 2x2 grid is ideal and avoids prohibited libraries. Method: Tailwind CSS. NO SVG/Mermaid JS.
+        - Human Diversity (Composition): Pie Chart. Shows simple proportions. Library: Chart.js/Canvas. NO SVG.
+    -->
+    <!-- 
+        Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All visualizations are rendered via Chart.js (Canvas), Plotly.js (WebGL), or structured HTML/CSS with Tailwind.
+    -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -41,15 +67,29 @@
                 height: 350px;
             }
         }
-        .swot-grid {
+        .living-beings-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
             gap: 1rem;
         }
-        .swot-item {
+        .living-beings-item {
             border-left-width: 4px;
             padding: 1rem;
+        }
+        /* New class for humanDiversity chart container */
+        .human-diversity-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 420px; /* Approx 30% smaller than 600px */
+            margin-left: auto;
+            margin-right: auto;
+            height: 210px; /* Approx 30% smaller than 300px */
+            max-height: 245px; /* Adjusted based on md breakpoint reduction */
+        }
+        @media (min-width: 768px) {
+            .human-diversity-chart-container {
+                height: 245px; /* Approx 30% smaller than 350px */
+            }
         }
     </style>
 </head>
@@ -87,7 +127,7 @@
                 <section id="cosmos-share" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 1 - Spiritual Space</h2>
                     <p class="text-gray-600 mb-6 text-justify"><b>The heavenly abode:</b> As God went out from God. Non-physical space (spiritual) was made and God had gone forth from God, but no created beings filled the spiritual space to share the non-physical creation.</p>
-                    <p class="text-gray-600 mb-6 text-justify">Important side note—<b>nobody's space:</b> As God went out from God, the void was not destroyed, simply divided from spiritual space.</p>
+                    <p class="text-gray-600 mb-6 text-justify">Important side note about the pre-creation space, i.e. <b>nobody's space</b>. As God went out from God, the void was not destroyed, simply divided from spiritual space.</p>
                 </section>
                 
                 <section id="tech-trends" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
@@ -100,72 +140,71 @@
                 <h2 class="text-3xl font-bold text-[#6A4A3C] mb-4">Era 1b - Filling Spiritual Space</h2>
                 <div class="relative w-full overflow-hidden rounded-lg" style="padding-top: 56.25%;">
                     <video controls autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover rounded-lg">
-                        <source src="Creation_Narrative_Video_Generated.mp4" type="video/mp4">
+                        <source src="https://davescreationnarrative.web.app/Creation_Narrative_Video_Generated.mp4" type="video/mp4">
                     </video>
                 </div>
-                <p class="text-gray-600 mt-4">Since we can't really perceive Non-physical beings it's best to look at the sun, moon, stars, and other planets of our solar system and image them as symbols representing spiritual beings that God created to fill the spiritual space.</p>
+                <p class="text-gray-600 mt-4">Since we can't really perceive Non-physical beings it's best to look at the sun, moon, stars, and other planets of our solar system and image them as symbols representing spiritual beings that God created to fill the spiritual space. The hosts of spiritual space are given authority to rule the spiritual space, and their symbols provide light, time markers, and order in the physical space.</p>
             </section>
 
-            <section id="swot-analysis" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                 <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">Strategic SWOT Analysis</h2>
-                 <p class="text-gray-600 mb-8 max-w-3xl mx-auto text-justify">A comprehensive analysis reveals the strategic landscape, highlighting the core strengths driving the cosmos, the weaknesses that need addressing, the opportunities for future expansion, and the threats that could impede growth.</p>
-                 <div class="swot-grid">
-                     <div class="swot-item bg-green-50 border-green-500">
-                         <h3 class="font-bold text-xl text-green-800 mb-2">Strengths 💪</h3>
-                         <ul class="list-disc list-inside text-gray-700 space-y-1">
-                             <li>High accuracy predictive modeling</li>
-                             <li>Automation of complex data tasks</li>
-                             <li>Scalability across enterprise</li>
-                         </ul>
-                     </div>
-                      <div class="swot-item bg-yellow-50 border-yellow-500">
-                         <h3 class="font-bold text-xl text-yellow-800 mb-2">Weaknesses 🧐</h3>
-                         <ul class="list-disc list-inside text-gray-700 space-y-1">
-                             <li>High implementation costs</li>
-                             <li>Shortage of skilled data scientists</li>
-                             <li>Data privacy and security concerns</li>
-                         </ul>
-                     </div>
-                      <div class="swot-item bg-blue-50 border-blue-500">
+            <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 text-center">
+                <h2 class="text-3xl font-bold text-[#6A4A3C] mb-4">Era 2b - Life on Earth</h2>
+                <div class="relative w-full overflow-hidden rounded-lg" style="padding-top: 56.25%;">
+                    <video controls autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover rounded-lg">
+                        <source src="https://davescreationnarrative.web.app/Earth_Formation_Video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="text-gray-600 mt-4">Next we take a rather special interest in one planet. God goes forth from God and creates life on Earth. The grasses grass. The fruit trees fruit. And God saw that it was good.</p>
+            </section>
+
+            <section id="nephesh-hiya" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                 <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3 - Designing Nephesh Hiya נֶפֶשׁ חַיָּה </h2>
+                 <p class="text-gray-600 mb-1 max-w-3xl mx-auto text-center">Beings with the Breath of Life in Them</p>
+                 <div class="living-beings-grid">
+                      <div class="living-beings-item bg-blue-50 border-blue-500">
                          <h3 class="font-bold text-xl text-blue-800 mb-2">Opportunities 🚀</h3>
                          <ul class="list-disc list-inside text-gray-700 space-y-1">
-                             <li>Expansion into emerging cosmos</li>
-                             <li>Integration with IoT devices</li>
-                             <li>Development of ethical AI frameworks</li>
+                             <li>Beings need to be free to choose for themselves how to exist</li>
+                             <li>Love can grow.</li>
                          </ul>
                      </div>
-                      <div class="swot-item bg-red-50 border-red-500">
+                      <div class="living-beings-item bg-red-50 border-red-500">
                          <h3 class="font-bold text-xl text-red-800 mb-2">Threats ⚠️</h3>
                          <ul class="list-disc list-inside text-gray-700 space-y-1">
-                             <li>Increasingly strict regulations</li>
-                             <li>Potential for algorithmic bias</li>
-                             <li>Competition from open-source tools</li>
+                             <li>Free beings may not love you back</li>
+                             <li>A free being can cause non-life and threaten the life to other free living beings</li>
                          </ul>
                      </div>
                  </div>
+                 <p class="text-gray-600 mb-8 max-w-3xl mx-auto text-center">Let's start with beings that can multiple according to their kind that lack the mental capacity / potential to be images of God. We also need to set limits on how physical and non-physical beings communicate. We also need to invite to the images of God to receive a revelation of God. Perhaps this will take more than one story.</p>
             </section>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <section id="industry-adoption" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                    <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Adoption by Industry</h2>
-                     <p class="text-gray-600 mb-6 text-justify">Finance and Healthcare are leading adoption, leveraging AI for fraud detection and personalized medicine. Retail follows closely, using AI for supply chain optimization.</p>
+                    <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3a - Animals</h2>
+                     <p class="text-gray-600 mb-6 text-justify">Animals need to fill all the spaces of the earth. They are free. They are good. They are not tame.</p>
                     <div class="chart-container">
-                        <canvas id="industryAdoptionChart"></canvas>
+                        <canvas id="animalChart"></canvas>
                     </div>
                 </section>
 
-                <section id="regional-growth" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Regional Growth Insights</h2>
-                     <p class="text-gray-600 mb-6 text-justify">While North America remains the largest cosmos, the Asia-Pacific region is poised for the fastest growth, driven by massive data generation and government investment.</p>
-                     <div class="plot-container">
-                        <div id="regionalGrowthPlot"></div>
+                <section id="human-diversity" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3b - Humans</h2>
+                     <p class="text-gray-600 mb-6 text-justify">This is going to take some time and will take some significant ongoing effort to make a being capable of partnership with God. These beings will be eternal and live in the unified physical and non-physical space, but perhaps not all at once. God saw what he had made so far and it was very good.</p>
+                     <div class="human-diversity-chart-container">
+                        <canvas id="humanDiversity"></canvas>
                     </div>
                 </section>
             </div>
 
-            <footer class="text-center mt-12 pt-8 border-t border-gray-300">
-                 <h2 class="text-3xl font-bold text-[#00A0B0] mb-2">Future Outlook</h2>
-                 <p class="text-gray-600 max-w-4xl mx-auto text-justify">The AI Analytics cosmos is on a trajectory of transformative growth. The future will be defined by hyper-personalization, increased automation, and the democratization of data science tools. Ethical considerations and robust data governance will be paramount for sustainable success. The integration of AI into the core of business strategy is no longer an option, but an imperative for survival and growth in the digital age.</p>
+            <section id="cosmos-overview" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">Currrent Era - The Already and the Not Yet</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-justify">Right now life as moved very far into God's plan. God has gone forth into the Spiritual space as the Holy Spirit and God has gone forth into the Physical space as Jesus.  We find ourselves living in the already and the not-yet of God's grand plan.  And the story continues...</p>
+                </div>
+            </section>
+
+            <footer class="text-center mt-12 pt-6 border-t border-gray-300">
+                 <p class="text-gray-300 max-w-4xl mx-auto text-center">I was just having fun with AI tools to think more about the creative process.</p>
             </footer>
 
         </main>
@@ -271,117 +310,70 @@
                 }
             });
             
-            // Removed Chart.js initialization for marketShareChart
-            // const ctxShare = document.getElementById('marketShareChart').getContext('2d');
-            // new Chart(ctxShare, {
-            //     type: 'doughnut',
-            //     data: {
-            //         labels: ['Innovate Inc.', 'DataDriven Corp', 'LogicLeap AI', 'QuantumQ', 'Other Startups'],
-            //         datasets: [{
-            //             label: 'Cosmos Share',
-            //             data: [35, 25, 15, 10, 15],
-            //             backgroundColor: CHART_COLORS,
-            //             borderColor: '#fff',
-            //             borderWidth: 4
-            //         }]
-            //     },
-            //     options: {
-            //         responsive: true,
-            //         maintainAspectRatio: false,
-            //         ...CHARTJS_TOOLTIP_CONFIG,
-            //         plugins: {
-            //              ...CHARTJS_TOOLTIP_CONFIG.plugins,
-            //              legend: { position: 'bottom', labels: { color: '#4A5568' } }
-            //         }
-            //     }
-            // });
-
-            // Removed Chart.js initialization for techTrendsChart
-            // const ctxTech = document.getElementById('techTrendsChart').getContext('2d');
-            // new Chart(ctxTech, {
-            //     type: 'bar',
-            //     data: {
-            //         labels: [
-            //             'Natural Language Processing (NLP)', 
-            //             'Predictive & Prescriptive Analytics', 
-            //             'Computer Vision', 
-            //             'Robotic Process Automation (RPA)'
-            //         ].map(label => wrapLabel(label, 20)),
-            //         datasets: [{
-            //             label: 'Adoption Rate (%)',
-            //             data: [85, 78, 65, 55],
-            //             backgroundColor: CHART_COLORS,
-            //             borderColor: CHART_COLORS,
-            //             borderWidth: 1
-            //         }]
-            //     },
-            //     options: {
-            //         ...defaultChartOptions,
-            //         indexAxis: 'y',
-            //          plugins: {
-            //             ...defaultChartOptions.plugins,
-            //             legend: { display: false }
-            //         }
-            //     }
-            // });
-
-            const ctxIndustry = document.getElementById('industryAdoptionChart').getContext('2d');
-            new Chart(ctxIndustry, {
+            const ctxAnimal = document.getElementById('animalChart').getContext('2d');
+            new Chart(ctxAnimal, {
                 type: 'bar',
                 data: {
-                    labels: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'],
-                    datasets: [
-                        {
-                            label: 'Legacy Systems',
-                            data: [20, 30, 40, 50],
-                            backgroundColor: PALETTE.yellow,
-                        },
-                        {
-                            label: 'AI-Powered Solutions',
-                            data: [80, 70, 60, 50],
-                            backgroundColor: PALETTE.blue,
-                        }
-                    ]
+                    labels: ['Mammals', 'Birds', 'Reptiles', 'Fish', 'Insects'],
+                    datasets: [{
+                        label: 'Animal Populations',
+                        data: [80, 70, 60, 50, 90],
+                        backgroundColor: CHART_COLORS,
+                        borderColor: CHART_COLORS,
+                        borderWidth: 1
+                    }]
                 },
                 options: {
                     ...defaultChartOptions,
+                    plugins: {
+                        ...defaultChartOptions.plugins,
+                        legend: { display: false }
+                    },
                     scales: {
-                        x: { stacked: true, grid: { display: false } },
-                        y: { stacked: true }
+                        x: {
+                            ...defaultChartOptions.scales.x,
+                            title: {
+                                display: true,
+                                text: 'Type of Animal',
+                                color: '#4A5568'
+                            }
+                        },
+                        y: {
+                            ...defaultChartOptions.scales.y,
+                            title: {
+                                display: true,
+                                text: 'Relative Population Index',
+                                color: '#4A5568'
+                            },
+                            beginAtZero: true
+                        }
                     }
                 }
             });
 
-            const regionalData = {
-                regions: ['North America', 'Europe', 'Asia-Pacific', 'Latin America', 'MEA'],
-                investment: [8.5, 7.2, 9.1, 4.5, 3.1],
-                adoptionRate: [88, 75, 82, 55, 48],
-                marketSize: [45, 35, 25, 10, 5] 
-            };
-            const plotData = [{
-                x: regionalData.adoptionRate,
-                y: regionalData.investment,
-                text: regionalData.regions,
-                mode: 'markers',
-                marker: {
-                    size: regionalData.marketSize.map(s => s * 1.5), 
-                    color: CHART_COLORS,
+            const ctxHumanDiversity = document.getElementById('humanDiversity').getContext('2d');
+            new Chart(ctxHumanDiversity, {
+                type: 'pie',
+                data: {
+                    labels: ['Male', 'Female'],
+                    datasets: [{
+                        label: 'Human Diversity',
+                        data: [50, 50],
+                        backgroundColor: [PALETTE.blue, PALETTE.red],
+                        borderColor: '#fff',
+                        borderWidth: 4
+                    }]
                 },
-                type: 'scattergl'
-            }];
-            const plotLayout = {
-                title: 'Cosmos Dynamics by Region',
-                xaxis: { title: 'Adoption Rate (%)' },
-                yaxis: { title: 'Investment Index' },
-                autosize: true,
-                font: {
-                    family: 'Inter, sans-serif',
-                    color: '#4A5568'
-                },
-                paper_bgcolor: 'rgba(0,0,0,0)',
-                plot_bgcolor: 'rgba(0,0,0,0)',
-            };
-            Plotly.newPlot('regionalGrowthPlot', plotData, plotLayout, {responsive: true});
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...CHARTJS_TOOLTIP_CONFIG,
+                    plugins: {
+                         ...CHARTJS_TOOLTIP_CONFIG.plugins,
+                         legend: { position: 'bottom', labels: { color: '#4A5568' } }
+                    }
+                }
+            });
         });
     </script>
 </body>
