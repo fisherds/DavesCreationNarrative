@@ -1,6 +1,7 @@
 <!-- Edited at: https://gemini.google.com/app/cb61cbe2c69755b1 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +40,17 @@
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8;
         }
+
+        /* Ensure videos maintain aspect ratio and are responsive within their containers */
+        video {
+            display: block;
+            /* Remove extra space below video */
+            max-width: 100%;
+            height: auto;
+        }
+
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -49,11 +60,13 @@
             height: 300px;
             max-height: 400px;
         }
+
         @media (min-width: 768px) {
             .chart-container {
                 height: 350px;
             }
         }
+
         .plot-container {
             position: relative;
             width: 100%;
@@ -63,61 +76,171 @@
             height: 300px;
             max-height: 400px;
         }
+
         @media (min-width: 768px) {
             .plot-container {
                 height: 350px;
             }
         }
+
         .living-beings-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
+
         .living-beings-item {
             border-left-width: 4px;
             padding: 1rem;
         }
+
         /* New class for humanDiversity chart container */
         .human-diversity-chart-container {
             position: relative;
             width: 100%;
-            max-width: 420px; /* Approx 30% smaller than 600px */
+            max-width: 420px;
+            /* Approx 30% smaller than 600px */
             margin-left: auto;
             margin-right: auto;
-            height: 210px; /* Approx 30% smaller than 300px */
-            max-height: 245px; /* Adjusted based on md breakpoint reduction */
+            height: 210px;
+            /* Approx 30% smaller than 300px */
+            max-height: 245px;
+            /* Adjusted based on md breakpoint reduction */
         }
+
         @media (min-width: 768px) {
             .human-diversity-chart-container {
-                height: 245px; /* Approx 30% smaller than 350px */
+                height: 245px;
+                /* Approx 30% smaller than 350px */
             }
         }
     </style>
 </head>
+
 <body class="text-gray-800">
 
     <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-7xl">
 
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-black text-[#00A0B0] uppercase tracking-wide">Dave's Creation Narrative</h1>
-            <p class="text-xl md:text-2xl mt-2 text-gray-600">To Better Understand the Creative Process of Making a Creation Narrative...<br> Try Creating One (but using your cosmology)!</p>
+            <h1 class="text-4xl md:text-6xl font-black text-[#00A0B0] uppercase tracking-wide">Dave's Creation Narrative
+            </h1>
+            <p class="text-xl md:text-2xl mt-2 text-gray-600">To Better Understand the Creative Process of Making a
+                Creation Narrative...<br> Try Creating One (but using your cosmology)!</p>
         </header>
 
         <main class="space-y-8">
-            
             <section id="cosmos-overview" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">Era 0 - The Big Bang and Boundary of the Void</h2>
-                    <p class="text-gray-600 max-w-3xl mx-auto text-justify">Before time began there was nothing, no laws of physics, no dimensions, no time, only one God, and it was not good. So God set about the business of designing, building, sustaining, and maintaining life. God began to go forth from God.</p>
+                    <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">My Context</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-justify">Like I people, I have a name, I live in a community and I have hold certain scientific believes.  I live in a time when AI can make amazing images, but somehow lacks a spell checker (see the image below).  I heard of cosmological models that push my understanding, the ΛCDM model, and I have understood models that come before me.  Most center around what moves and what is stationary.  In my context I worry only about the science and see there models through my lens.</p>
+                </div>
+
+                <!-- Main content area: Image on left, descriptions/videos on right -->
+                <div class="flex flex-col lg:flex-row gap-2 lg:gap-6 items-start">
+                    <!-- Left Section: Main Image -->
+                    <div class="lg:w-1/3 flex justify-center items-center p-2">
+                        <img src="https://davescreationnarrative.web.app/cosmological_models.png"
+                            alt="A visual representation of various cosmological models from Flat Earth to Lambda-CDM"
+                            class="rounded-lg shadow-lg max-w-full h-auto object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+
+                    <!-- Right Section: Model Descriptions and Videos -->
+                    <div class="lg:w-1/2 flex flex-col gap-4">
+
+                        <!-- Model 1: ΛCDM Model -->
+                        <div class="bg-gray-50 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h3 class="text-2xl font-bold text-blue-700 mb-3">
+                                1. The ΛCDM Model: Lambda - Cold Dark Matter
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                At the pinnacle of our scientific understanding is ΛCDM, Our Current Cosmic Frontier, but I care not about the details.
+                            </p>
+                        </div>
+
+                        <!-- Model 2: Galactocentric Model -->
+                        <div class="bg-gray-50 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h3 class="text-2xl font-bold text-green-700 mb-3">
+                                2. The Galactocentric Model: Beyond Our Star
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                I'm more interested in how a universe might rotate in much the same way that a galaxy, solar system, or atom would rotate, with bits of matter falling out as the universe expands.  While perhaps not as scientific as ΛCDM, it seems to be the model I grasp best.
+                            </p>
+                            <div class="flex justify-center mt-4">
+                                <video controls src="https://davescreationnarrative.web.app/cosmic_centric_model.mp4"
+                                    class="w-full rounded-lg shadow-xl border-2 border-gray-200"
+                                    preload="metadata">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Model 3: Heliocentric Model -->
+                        <div class="bg-gray-50 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h3 class="text-2xl font-bold text-purple-700 mb-3">
+                                3. The Heliocentric Model
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Historically in my century we have at least been Heliocentric.
+                            </p>
+                            <div class="flex justify-center mt-2">
+                                <video controls src="https://davescreationnarrative.web.app/heliocentric_model.mp4"
+                                    class="w-full rounded-lg shadow-xl border-2 border-gray-200"
+                                    preload="metadata">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Model 4: Geocentric Model -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h3 class="text-2xl font-bold text-orange-700 mb-3">
+                                4. The Geocentric Model: Earth at the Cosmic Core
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                For centuries before, humanity's view of the cosmos was deeply rooted in the belief that Earth
+                                was the absolute, unmoving center of the universes.
+                            </p>
+                            <div class="flex justify-center mt-4">
+                                <video controls src="https://davescreationnarrative.web.app/geocentric_model.mp4"
+                                    class="w-full rounded-lg shadow-xl border-2 border-gray-200"
+                                    preload="metadata">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Model 5: Flat Earth / Ptolemaic Firmament Model -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h3 class="text-2xl font-bold text-red-700 mb-3">
+                                5. The Flat Earth Model: The Ancient Firmament
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                And before that the earth was flat and live was viewed from the perspective of what you could see.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="cosmos-overview" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">Era 0 - The Big Bang and Boundary of the Void
+                    </h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-justify">Before time began there was nothing, no laws
+                        of physics, no dimensions, no time, only one God, and it was not good. So God set about the
+                        business of designing, building, sustaining, and maintaining life. God began to go forth from
+                        God.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-1 text-center">
                         <h3 class="text-lg font-semibold text-gray-500">In the beginning...</h3>
                         <p class="text-3xl lg:text-4xl font-extrabold text-[#EB6841] my-4">125 Billion Years Ago</p>
-                        <p class="text-gray-500">Growth of the Cosmos.<br><b>X-Axis:</b> Billions of Years Ago<br><b>Y-Axis:</b> Units Unknown</p>
+                        <p class="text-gray-500">Growth of the Cosmos.<br><b>X-Axis:</b> Billions of Years
+                            Ago<br><b>Y-Axis:</b> Units Unknown</p>
                     </div>
                     <div class="md:col-span-2">
-                         <div class="chart-container">
+                        <div class="chart-container">
                             <canvas id="cosmosGrowthChart"></canvas>
                         </div>
                     </div>
@@ -127,71 +250,98 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <section id="cosmos-share" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 1 - Spiritual Space</h2>
-                    <p class="text-gray-600 mb-6 text-justify"><b>The heavenly abode:</b> As God went out from God, non-physical space (spiritual) was made, but no created beings filled the spiritual space to share the non-physical creation.</p>
-                    <p class="text-gray-600 mb-6 text-justify">Important side note about the pre-creation space, i.e. <b>nobody's space:</b> As God went out from God, the void was not destroyed, simply divided from spiritual and physical space.</p>
+                    <p class="text-gray-600 mb-6 text-justify"><b>The heavenly abode:</b> As God went out from God,
+                        non-physical space (spiritual) was made, but no created beings filled the spiritual space to
+                        share the non-physical creation.</p>
+                    <p class="text-gray-600 mb-6 text-justify">Important side note about the pre-creation space, i.e.
+                        <b>nobody's space:</b> As God went out from God, the void was not destroyed, simply divided from
+                        spiritual and physical space.</p>
                 </section>
-                
+
                 <section id="tech-trends" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 2 - Physical Space</h2>
-                    <p class="text-gray-600 mb-6 text-justify"><b>The physical cosmos abode:</b> As God went out from God, physical space began not as a cosmic boom, but as a natural expansion of God, moving forward at the speed of light as the created cosmos pushed into the void of nothing. Dimensional space, following the ordering principles of time, space, matter, and physical laws moved forward at the speed of light, dividing the void. And God reflected on his work and it had the potential for sustainable life.</p>
+                    <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 2 - Physical Space</h2>
+                    <p class="text-gray-600 mb-6 text-justify"><b>The physical cosmos abode:</b> As God went out from
+                        God, physical space began not as a cosmic boom, but as a natural expansion of God, moving
+                        forward at the speed of light as the created cosmos pushed into the void of nothing. Dimensional
+                        space, following the ordering principles of time, space, matter, and physical laws moved forward
+                        at the speed of light, dividing the void. And God reflected on his work and it had the potential
+                        for sustainable life.</p>
                 </section>
             </div>
 
             <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 text-center">
                 <h2 class="text-3xl font-bold text-[#6A4A3C] mb-4">Era 1b - Filling Spiritual Space</h2>
                 <div class="relative w-full overflow-hidden rounded-lg" style="padding-top: 56.25%;">
-                    <video controls autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover rounded-lg">
-                        <source src="https://davescreationnarrative.web.app/Creation_Narrative_Video_Generated.mp4" type="video/mp4">
+                    <video controls autoplay muted loop playsinline
+                        class="absolute top-0 left-0 w-full h-full object-cover rounded-lg">
+                        <source src="https://davescreationnarrative.web.app/Creation_Narrative_Video_Generated.mp4"
+                            type="video/mp4">
                     </video>
                 </div>
-                <p class="text-gray-600 mt-4">Since we can't really perceive non-physical beings, it's best to look at the sun, moon, stars, and other planets of our solar system and imagine them as symbols representing spiritual beings that God created to fill the spiritual space. The hosts of spiritual space are given authority to rule the spiritual space, and their symbols provide light, time markers, and order in the physical space.</p>
+                <p class="text-gray-600 mt-4">Since we can't really perceive non-physical beings, it's best to look at
+                    the sun, moon, stars, and other planets of our solar system and imagine them as symbols representing
+                    spiritual beings that God created to fill the spiritual space. The hosts of spiritual space are
+                    given authority to rule the spiritual space, and their symbols provide light, time markers, and
+                    order in the physical space.</p>
             </section>
 
             <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 text-center">
                 <h2 class="text-3xl font-bold text-[#6A4A3C] mb-4">Era 2b - Life on Earth</h2>
                 <div class="relative w-full overflow-hidden rounded-lg" style="padding-top: 56.25%;">
-                    <video controls autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover rounded-lg">
+                    <video controls autoplay muted loop playsinline
+                        class="absolute top-0 left-0 w-full h-full object-cover rounded-lg">
                         <source src="https://davescreationnarrative.web.app/Earth_Formation_Video.mp4" type="video/mp4">
                     </video>
                 </div>
-                <p class="text-gray-600 mt-4">Next, we take a rather special interest in one planet. God goes forth from God and creates life on Earth. The grasses grass. The fruit trees fruit. And God saw that it was good.</p>
+                <p class="text-gray-600 mt-4">Next, we take a rather special interest in one planet. God goes forth from
+                    God and creates life on Earth. The grasses grass. The fruit trees fruit. And God saw that it was
+                    good.</p>
             </section>
 
             <section id="nephesh-hiya" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                 <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3 - Designing Nephesh Hiya נֶפֶשׁ חַיָּה </h2>
-                 <p class="text-gray-600 mb-1 max-w-3xl mx-auto text-center">Filling the physical space with beings that have the Breath of Life in Them</p>
-                 <div class="living-beings-grid">
-                      <div class="living-beings-item bg-blue-50 border-blue-500">
-                         <h3 class="font-bold text-xl text-blue-800 mb-2">Opportunities 🚀</h3>
-                         <ul class="list-disc list-inside text-gray-700 space-y-1">
-                             <li>Beings need to be free to choose for themselves how to exist.</li>
-                             <li>Love can grow.</li>
-                         </ul>
-                     </div>
-                      <div class="living-beings-item bg-red-50 border-red-500">
-                         <h3 class="font-bold text-xl text-red-800 mb-2">Threats ⚠️</h3>
-                         <ul class="list-disc list-inside text-gray-700 space-y-1">
-                             <li>Free beings may not love you back.</li>
-                             <li>A free being can cause non-life and threaten the life of other free living beings.</li>
-                         </ul>
-                     </div>
-                 </div>
-                 <p class="text-gray-600 mb-8 max-w-3xl mx-auto text-center">Let's start with beings that can multiply according to their kind that lack the mental capacity / potential to be images of God. We also need to set limits on how physical and non-physical beings communicate. We also need to invite the images of God to receive a revelation of God. Perhaps this will take more than one story.</p>
+                <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3 - Designing Nephesh Hiya נֶפֶשׁ
+                    חַיָּה </h2>
+                <p class="text-gray-600 mb-1 max-w-3xl mx-auto text-center">Filling the physical space with beings that
+                    have the Breath of Life in Them</p>
+                <div class="living-beings-grid">
+                    <div class="living-beings-item bg-blue-50 border-blue-500">
+                        <h3 class="font-bold text-xl text-blue-800 mb-2">Opportunities 🚀</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Beings need to be free to choose for themselves how to exist.</li>
+                            <li>Love can grow.</li>
+                        </ul>
+                    </div>
+                    <div class="living-beings-item bg-red-50 border-red-500">
+                        <h3 class="font-bold text-xl text-red-800 mb-2">Threats ⚠️</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Free beings may not love you back.</li>
+                            <li>A free being can cause non-life and threaten the life of other free living beings.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-8 max-w-3xl mx-auto text-center">Let's start with beings that can multiply
+                    according to their kind that lack the mental capacity / potential to be images of God. We also need
+                    to set limits on how physical and non-physical beings communicate. We also need to invite the images
+                    of God to receive a revelation of God. Perhaps this will take more than one story.</p>
             </section>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <section id="industry-adoption" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3a - Animals</h2>
-                     <p class="text-gray-600 mb-6 text-justify">Animals need to fill all the spaces of the Earth. They are free. They are good. They are not tame.</p>
+                    <p class="text-gray-600 mb-6 text-justify">Animals need to fill all the spaces of the Earth. They
+                        are free. They are good. They are not tame.</p>
                     <div class="chart-container">
                         <canvas id="animalChart"></canvas>
                     </div>
                 </section>
 
                 <section id="human-diversity" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                     <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3b - Humans</h2>
-                     <p class="text-gray-600 mb-6 text-justify">This is going to take some time and will take some significant ongoing effort to make a being capable of partnership with God. These beings will be eternal and live in the unified physical and non-physical space, but perhaps not all at once. God saw what he had made so far, and it was very good.</p>
-                     <div class="human-diversity-chart-container">
+                    <h2 class="text-2xl font-bold text-[#6A4A3C] mb-2 text-center">Era 3b - Humans</h2>
+                    <p class="text-gray-600 mb-6 text-justify">This is going to take some time and will take some
+                        significant ongoing effort to make a being capable of partnership with God. These beings will be
+                        eternal and live in the unified physical and non-physical space, but perhaps not all at once.
+                        God saw what he had made so far, and it was very good.</p>
+                    <div class="human-diversity-chart-container">
                         <canvas id="humanDiversity"></canvas>
                     </div>
                 </section>
@@ -200,12 +350,18 @@
             <section id="cosmos-overview" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2">Current Era - The Already and the Not Yet</h2>
-                    <p class="text-gray-600 max-w-3xl mx-auto text-justify">Right now life has moved very far into God's plan. God has gone forth into the spiritual space as the Holy Spirit, and God has gone forth into the physical space as Jesus. We find ourselves living in the already of Jesus the King being placed on the throne and the not-yet of God's grand plan, still allowing life-killing creatures intermixed with life-giving creatures that choose God's light path. The Kingdom of God is here, and the Kingdom of God has not yet been fully realized. And the story continues...</p>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-justify">Right now life has moved very far into God's
+                        plan. God has gone forth into the spiritual space as the Holy Spirit, and God has gone forth
+                        into the physical space as Jesus. We find ourselves living in the already of Jesus the King
+                        being placed on the throne and the not-yet of God's grand plan, still allowing life-killing
+                        creatures intermixed with life-giving creatures that choose God's light path. The Kingdom of God
+                        is here, and the Kingdom of God has not yet been fully realized. And the story continues...</p>
                 </div>
             </section>
 
             <footer class="text-center mt-12 pt-6 border-t border-gray-300">
-                 <p class="text-gray-300 max-w-4xl mx-auto text-center">I was just having fun with AI tools to think more about the creative process.</p>
+                <p class="text-gray-300 max-w-4xl mx-auto text-center">I was just having fun with AI tools to think more
+                    about the creative process.</p>
             </footer>
 
         </main>
@@ -239,18 +395,18 @@
                 lines.push(currentLine.trim());
                 return lines;
             }
-            
+
             const CHARTJS_TOOLTIP_CONFIG = {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            title: function(tooltipItems) {
+                            title: function (tooltipItems) {
                                 const item = tooltipItems[0];
                                 let label = item.chart.data.labels[item.dataIndex];
                                 if (Array.isArray(label)) {
-                                  return label.join(' ');
+                                    return label.join(' ');
                                 } else {
-                                  return label;
+                                    return label;
                                 }
                             }
                         }
@@ -266,7 +422,7 @@
                     ...CHARTJS_TOOLTIP_CONFIG.plugins,
                     legend: {
                         labels: {
-                            color: '#4A5568' 
+                            color: '#4A5568'
                         }
                     }
                 },
@@ -310,7 +466,7 @@
                     }
                 }
             });
-            
+
             const ctxAnimal = document.getElementById('animalChart').getContext('2d');
             new Chart(ctxAnimal, {
                 type: 'bar',
@@ -370,12 +526,13 @@
                     maintainAspectRatio: false,
                     ...CHARTJS_TOOLTIP_CONFIG,
                     plugins: {
-                         ...CHARTJS_TOOLTIP_CONFIG.plugins,
-                         legend: { position: 'bottom', labels: { color: '#4A5568' } }
+                        ...CHARTJS_TOOLTIP_CONFIG.plugins,
+                        legend: { position: 'bottom', labels: { color: '#4A5568' } }
                     }
                 }
             });
         });
     </script>
 </body>
+
 </html>
