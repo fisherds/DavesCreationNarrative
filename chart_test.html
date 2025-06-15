@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>y = x³ Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="cubicChart" width="600" height="400"></canvas>
+  <script>
+    // Generate data
+    const xValues = [];
+    const yValues = [];
+    for (let x = 0; x <= 7; x += 1) {
+      xValues.push(x);
+      yValues.push(Math.pow(x, 3));
+    }
+    console.log(yValues);
+
+    const ctx = document.getElementById('cubicChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: xValues,
+        datasets: [{
+          label: 'y = x³',
+          data: yValues,
+          borderColor: 'blue',
+          fill: false,
+          tension: 0
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'x'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'y'
+            }
+          }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Plot of y = x³'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

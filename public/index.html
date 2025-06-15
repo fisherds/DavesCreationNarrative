@@ -9,6 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
     <!-- 
         Narrative Plan & Structure:
         The infographic now focuses on Dave's Creation Narrative.
@@ -459,7 +461,7 @@
                     labels: ['-150', '-125', '-100', '-75', '-50', '-25', '0', '25'],
                     datasets: [{
                         label: 'Cosmos Size',
-                        data: [0, 0, 25, 35, 50, 70, 95, 125],
+                        data: [0, 1, 8, 27, 64, 125, 216, 343],
                         borderColor: PALETTE.blue,
                         backgroundColor: 'rgba(0, 160, 176, 0.1)',
                         fill: true,
@@ -520,16 +522,15 @@
                                 },
                                 textLabel: {
                                     type: 'label',
-                                    // Position the label at the start of the arrow line
                                     xValue: 6,
-                                    yValue: 68,
+                                    yValue: 110,
                                     content: ['The Entirety of', 'Human Existence'],
                                     color: '#fff',
                                     backgroundColor: PALETTE.annotation,
                                     font: { size: 12, weight: 'bold' },
                                     borderRadius: 6,
                                     padding: 6,
-                                    xAdjust: 35
+                                    xAdjust: 15
                                 }
                             }
                         }
